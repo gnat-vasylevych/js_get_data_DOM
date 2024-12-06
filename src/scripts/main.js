@@ -10,7 +10,7 @@ function main() {
   const popul = [ ...doc.getElementsByClassName('population') ].map(elem => elem.innerHTML.split(',').join(''));
 
   const total = popul.reduce((prev, elem) => +elem + prev, 0);
-  const average = total / popul.length;
+  const average = Math.floor(total / popul.length);
 
 
   const totalPopulEl = doc.getElementsByClassName('total-population')[0];
